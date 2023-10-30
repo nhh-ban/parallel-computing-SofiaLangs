@@ -1,3 +1,4 @@
+#Using Parallel loop
 # Assignment 1:  
 library(tweedie) 
 library(ggplot2)

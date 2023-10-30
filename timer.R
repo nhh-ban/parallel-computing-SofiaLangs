@@ -58,3 +58,13 @@ printTicTocLog() %>%
 #on the computer used or/and other activities/pages open on the computer
 
 #also for furrr I had to insert another if function that maybe slows the process
+
+
+#for the third requirement I tried working on the MTweedieTests function itself 
+tic("Modifying directly MTweedieTest function")
+source("scripts/Modify_function.R")
+toc(log = TRUE )
+printTicTocLog() %>% 
+  knitr::kable()
+
+#It appears to be slower but again I am not sure if it is a generasible result
