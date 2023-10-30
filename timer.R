@@ -36,14 +36,16 @@ printTicTocLog() %>%
   knitr::kable()
 
 ##############Rewriting using furrr
+
+maxcores<- 6
+Cores<-min(parallel::detectCores(), maxcores) 
 tic(paste0("Furrr loop, ",Cores, " cores") )
 source("scripts/furrr_loop.R")
 toc(log = TRUE )
 printTicTocLog() %>% 
   knitr::kable()
+
 ##############Parallel loop using more cores
-maxcores<- 6
-Cores<-min(parallel::detectCores(), maxcores) 
 
 tic(paste0("Parallel loop, ",Cores, " cores") )
 source("scripts/Parallel_loop.R")
